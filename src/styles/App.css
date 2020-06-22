@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.App {
+  background-color: #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.App .left {
+  overflow-y: scroll;
+  background-color: #fff;
+  width: 35%;
+  height: 100%;
+}
+
+.App .left form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5%;
+}
+
+.App .left form h1 {
+  margin: 10px 0px;
+  font-size: 20px;
+}
+
+.App .left form hr {
+  margin: 5px 0px;
+  width: 50%;
+  border: 1px solid black;
+}
+
+.App .left form span {
+  color: #f30502;
+}
+
+.App .left form input,
+.App .left form textarea {
+  margin: 10px 0px;
+  height: 40px;
+  border: 1px solid #747070;
+  padding: 5px 5px;
+  font-size: 15px;
+}
+
+.App .left form input[type="submit"],
+.App .left form textarea[type="submit"] {
+  background-color: #1164a8;
+  color: white;
+  font-size: 1.2em;
+}
+
+.App .left form input:focus,
+.App .left form textarea:focus {
+  border: 2px solid #1164a8;
+  outline: none;
+}
+
+.App .left form textarea {
+  height: 80px;
+  resize: vertical;
+  min-height: 40px;
+}
+
+.App .left form .education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .left form .education .item-education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .left form .education .item-education input {
+  width: 100%;
+  margin: 10px 10px;
+}
+
+.App .left form .education .item-education input:last-child {
+  margin: 10px 0px 10px 10px;
+}
+
+.App .right {
+  overflow-y: scroll;
+  width: 65%;
+  height: 100vh;
+  padding: 2%;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.App .right .myCV {
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 3%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .right .myCV .headingCV {
+  padding: 3%;
+  background-color: #1164a8;
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  word-wrap: break-word;
+}
+
+.App .right .myCV .headingCV h1 {
+  width: 50%;
+  font-size: 3rem;
+}
+
+.App .right .myCV .headingCV ul {
+  text-align: center;
+  width: 50%;
+  list-style: none;
+}
+
+.App .right .myCV blockquote {
+  width: 80%;
+  padding: 5%;
+  text-align: center;
+}
+
+.App .right .myCV .educationCV,
+.App .right .myCV .experienceCV {
+  width: 100%;
+  padding: 0% 5%;
+}
+
+.App .right .myCV .educationCV h1,
+.App .right .myCV .experienceCV h1 {
+  margin: 10px 0px;
+  color: #1164a8;
+}
+
+.App .right .myCV .educationCV .school,
+.App .right .myCV .educationCV .work,
+.App .right .myCV .experienceCV .school,
+.App .right .myCV .experienceCV .work {
+  padding: 3%;
+  border-left: 3px solid #0aa30a;
+  margin: 5px 0px;
+}
+
+.App .right .myCV .educationCV .school p,
+.App .right .myCV .educationCV .work p,
+.App .right .myCV .experienceCV .school p,
+.App .right .myCV .experienceCV .work p {
+  color: #818181;
+}
+
+.App .right .myCV .experienceCV .work {
+  border-left: 3px solid #e9e50d;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .left {
+    width: 100%;
+  }
+  .App .right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .App {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .left {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    overflow: hidden;
+  }
+  .App .right {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=App.css.map */

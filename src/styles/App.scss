@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.App {
+    background-color: #ddd;
+    display: flex;
+    height: 100vh;
+    .left {
+        overflow-y: scroll;
+        background-color: #fff;
+        width: 35%;
+        height: 100%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 5%;
+            h1 {
+                margin: 10px 0px;
+                font-size: 20px;
+            }
+            hr {
+                margin: 5px 0px;
+                width: 50%;
+                border: 1px solid rgb(0, 0, 0);
+            }
+            span {
+                color: #f30502;
+            }
+            input,
+            textarea {
+                margin: 10px 0px;
+                height: 40px;
+                border: 1px solid rgb(116, 112, 112);
+                padding: 5px 5px;
+                font-size: 15px;
+                &[type="submit"] {
+                    background-color: rgb(17, 100, 168);
+                    color: white;
+                    font-size: 1.2em;
+                }
+                &:focus {
+                    border: 2px solid rgb(17, 100, 168);
+                    outline: none;
+                }
+            }
+            textarea {
+                height: 80px;
+                resize: vertical;
+                min-height: 40px;
+            }
+            .education {
+                display: flex;
+                flex-direction: column;
+                .item-education {
+                    display: flex;
+                    align-items: center;
+                    input {
+                        width: 100%;
+                        margin: 10px 10px;
+                        &:last-child {
+                            margin: 10px 0px 10px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        overflow-y: scroll;
+        width: 65%;
+        height: 100vh;
+        padding: 2%;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .myCV {
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            padding-bottom: 3%;
+            flex-direction: column;
+            align-items: center;
+            .headingCV {
+                padding: 3%;
+                background-color: rgb(17, 100, 168);
+                color: #fff;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                word-wrap: break-word;
+                h1 {
+                    width: 50%;
+                    font-size: 3rem;
+                }
+                ul {
+                    text-align: center;
+                    width: 50%;
+                    list-style: none;
+                }
+            }
+            blockquote {
+                width: 80%;
+                padding: 5%;
+                text-align: center;
+            }
+            .educationCV,
+            .experienceCV {
+                width: 100%;
+                padding: 0% 5%;
+                h1 {
+                    margin: 10px 0px;
+                    color: rgb(17, 100, 168);
+                }
+                .school,
+                .work {
+                    padding: 3%;
+                    border-left: 3px solid rgb(10, 163, 10);
+                    margin: 5px 0px;
+                    p {
+                        color: rgb(129, 129, 129);
+                    }
+                }
+            }
+            .experienceCV {
+                .work {
+                    border-left: 3px solid rgb(233, 229, 13);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .App {
+        flex-direction: column;
+        .left {
+            width: 100%;
+        }
+        .right {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .App {
+        height: auto;
+        flex-direction: column;
+        .left {
+            width: 100%;
+            flex: 1;
+            overflow: hidden;
+        }
+        .right {
+            width: 100%;
+        }
+    }
+}
